@@ -1,0 +1,135 @@
+.footerWrapper{
+    position: relative;
+
+    .panel{
+        position: absolute;
+        bottom: 0;
+        right: 50px;
+        background: rgb(255, 255, 255);
+        color: black;
+        width: fit-content;
+        padding: 5px 20px;
+        transition: all .5s;
+        z-index: 0;
+
+        p{
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        p:hover{
+            color: #e88201;
+        }
+    }
+
+    .activePanel{
+        bottom: 130px;
+    }
+
+    .footer{
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        z-index: 99;
+        background: #15161a;
+        padding: 10px 50px;
+        position: relative;
+    
+        .footerLogo{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            padding: 3px;
+            color: gray;
+    
+            .logoBorder{
+                border: 1px solid gray;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    
+    
+            h2{
+                font-size: 25px;
+                margin: 0;
+                font-weight: 200;
+                letter-spacing: 2px;
+            }
+        }
+    
+        .footerLogo:hover{
+    
+            .logoBorder{
+                border-color: #e88201;
+                transition: 1s;
+                transform: rotate(360deg);
+            }
+    
+            h2{
+                color: white;
+            }
+        }
+        
+        .brandLogo{
+            display: flex;
+            gap: 10px;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            h2{
+                font-weight: 200;
+                color: gray;
+            }
+    
+            .brandBorder{
+                width: 40px;
+                height: 1px;
+                background: gray;
+                position: relative;
+                top: 40px;
+            }
+        }
+    
+        .footerButton{
+            position: relative;
+            background:#15161a;
+            z-index: 99;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+                button{
+                    padding: 6px 100px;
+                    background: transparent;
+                    color: white;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    font-size: 18px;
+                }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .brandLogo{
+
+        h2{
+            display: none;
+        }
+
+        .brandBorder{
+           display: none;
+        }
+    }
+
+    .footerButton{
+        button{
+            padding: 6px 100px;
+        }
+    }
+}
